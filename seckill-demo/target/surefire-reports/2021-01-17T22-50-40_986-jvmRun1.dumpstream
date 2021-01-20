@@ -1,0 +1,123 @@
+# Created at 2021-01-17T22:51:29.338
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:396)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+
+# Created at 2021-01-17T22:51:30.101
+Unexpected IOException with stream: 2021-01-17 22:51:30.101  WARN 74126 --- [127.0.0.1:15672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occured (Exception message: Socket closed)
+
+
+# Created at 2021-01-17T22:51:35.102
+Unexpected IOException with stream: 2021-01-17 22:51:35.102  INFO 74126 --- [tContainer#0-10] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:15672]
+
+
+# Created at 2021-01-17T22:51:35.103
+Unexpected IOException with stream: 2021-01-17 22:51:35.102  WARN 74126 --- [0:0:0:0:1:15672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occured (Exception message: Socket closed)
+
+
+# Created at 2021-01-17T22:51:35.104
+Unexpected IOException with stream: 2021-01-17 22:51:35.102 ERROR 74126 --- [ntContainer#0-9] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpTimeoutException: java.util.concurrent.TimeoutException
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:73) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:723) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2128) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2101) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2081) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1883) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1864) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1345) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1191) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.util.concurrent.TimeoutException: null
+	at com.rabbitmq.utility.BlockingCell.get(BlockingCell.java:77) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.utility.BlockingCell.uninterruptibleGet(BlockingCell.java:120) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:502) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:326) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1139) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1087) ~[amqp-client-5.10.0.jar:5.10.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:638) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:613) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	... 12 common frames omitted
+
+
+
+# Created at 2021-01-17T22:51:45.113
+Unexpected IOException with stream: 2021-01-17 22:51:45.112  WARN 74126 --- [0:0:0:0:1:15672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occured (Exception message: Socket closed)
+
+
+# Created at 2021-01-17T22:51:45.114
+Unexpected IOException with stream: 2021-01-17 22:51:45.112  INFO 74126 --- [ntContainer#0-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:15672]
+
+
+# Created at 2021-01-17T22:51:50.122
+Unexpected IOException with stream: 2021-01-17 22:51:50.120  WARN 74126 --- [127.0.0.1:15672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occured (Exception message: Socket closed)
+
+
+# Created at 2021-01-17T22:51:55.066
+Unexpected IOException with stream: 2021-01-17 22:51:55.066 ERROR 74126 --- [           main] o.s.a.r.l.SimpleMessageListenerContainer : Consumer failed to start in 60000 milliseconds; does the task executor have enough threads to support the container concurrency?
+
+
+# Created at 2021-01-17T22:51:55.126
+Unexpected IOException with stream: 2021-01-17 22:51:55.125  WARN 74126 --- [0:0:0:0:1:15672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occured (Exception message: Socket closed)
+
+
+# Created at 2021-01-17T22:51:55.127
+Unexpected IOException with stream: 2021-01-17 22:51:55.125  INFO 74126 --- [ntContainer#0-9] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:15672]
+
+
+# Created at 2021-01-17T22:51:55.127
+Unexpected IOException with stream: 2021-01-17 22:51:55.126 ERROR 74126 --- [ntContainer#0-8] o.s.a.r.l.SimpleMessageListenerContainer : Failed to check/redeclare auto-delete queue(s).
+
+org.springframework.amqp.AmqpTimeoutException: java.util.concurrent.TimeoutException
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:73) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:602) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:723) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.createConnection(ConnectionFactoryUtils.java:214) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2128) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2101) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2081) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1883) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1864) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1345) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1191) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at java.base/java.lang.Thread.run(Thread.java:832) ~[na:na]
+Caused by: java.util.concurrent.TimeoutException: null
+	at com.rabbitmq.utility.BlockingCell.get(BlockingCell.java:77) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.utility.BlockingCell.uninterruptibleGet(BlockingCell.java:120) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.utility.BlockingValueOrException.uninterruptibleGetValue(BlockingValueOrException.java:36) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.client.impl.AMQChannel$BlockingRpcContinuation.getReply(AMQChannel.java:502) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.client.impl.AMQConnection.start(AMQConnection.java:326) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1139) ~[amqp-client-5.10.0.jar:5.10.0]
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1087) ~[amqp-client-5.10.0.jar:5.10.0]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connectAddresses(AbstractConnectionFactory.java:638) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:613) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:565) ~[spring-rabbit-2.3.2.jar:2.3.2]
+	... 12 common frames omitted
+
+
+
+# Created at 2021-01-17T22:52:05.132
+Unexpected IOException with stream: 2021-01-17 22:52:05.131  INFO 74126 --- [ntContainer#0-7] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:15672]
+
+
+# Created at 2021-01-17T22:52:05.133
+Unexpected IOException with stream: 2021-01-17 22:52:05.131  WARN 74126 --- [0:0:0:0:1:15672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occured (Exception message: Socket closed)
+
+
+# Created at 2021-01-17T22:52:10.137
+Unexpected IOException with stream: 2021-01-17 22:52:10.137  WARN 74126 --- [127.0.0.1:15672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occured (Exception message: Socket closed)
+
+
